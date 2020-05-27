@@ -27,26 +27,26 @@ export default class App extends Component {
     }
   }
 
-  // componentDidMount = () => {
-  //   this.state.database.once("value", snapshot => {
-  //     if (snapshot && snapshot.exists()) {
-  //       let students = snapshot.val();
-  //       const newStudents = []
+  componentDidMount = () => {
+    this.state.database.once("value", snapshot => {
+      if (snapshot && snapshot.exists()) {
+        let students = snapshot.val();
+        const newStudents = []
         
-  //       Object.keys(students).forEach(key => newStudents.push({
-  //         name: students[key].name,
-  //         class: students[key].class,
-  //         teacher: students[key].teacher,
-  //         grade: students[key].grade,
-  //         birthday: students[key].birthday,
-  //         key: students[key].key,
-  //         index: students[key].index
-  //       }),
-  //       console.log(students))
-  //       this.setState({ students: newStudents })
-  //     }
-  //   })
-  // }
+        Object.keys(students).forEach(key => newStudents.push({
+          name: students[key].name,
+          class: students[key].class,
+          teacher: students[key].teacher,
+          grade: students[key].grade,
+          birthday: students[key].birthday,
+          key: students[key].key,
+          index: students[key].index
+        }),
+        console.log(students))
+        this.setState({ students: newStudents })
+      }
+    })
+  }
 
   addStudent = student => {
     var newStudents = [...this.state.students, student];
