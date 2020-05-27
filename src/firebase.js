@@ -1,6 +1,6 @@
-import firebase from "firebase";
-import "firebase/auth";
-import "firebase/firestore";
+// import firebase from "firebase";
+// import "firebase/auth";
+// import "firebase/firestore";
 
 const config = {
     apiKey: "AIzaSyCJEQn8kex17bZ74tQeXwlotFfKCXDZ52E",
@@ -13,5 +13,8 @@ const config = {
     measurementId: "G-21VMSZBD0P"
 }
 
-firebase.initializeApp(config);
-export default firebase;
+export default config;
+
+//  firebase.initializeApp(config);
+
+// export default firebase;
