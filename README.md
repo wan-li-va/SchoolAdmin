@@ -1,5 +1,16 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Deployed App
+
+This app is deployed at https://wan-li-va.github.io/SchoolAdmin/
+
+## Notes
+
+This app can currently read and write to firebase. Students can be added and deleted from the dashboard. 
+Problems have arisen with firebase authorization - an unfinished attempt at authorizing can be found on the "auth" branch.
+A simple mockup of the idea can be found at https://docs.google.com/drawings/d/1m8QZSaKeEQMXJ93eB-Zu8mkkR7wZfjLNVH17Ys6VTKs/edit?usp=sharing 
+This app is currently unfinished. 
+
 ## Available Scripts
 
 In the project directory, you can run:
