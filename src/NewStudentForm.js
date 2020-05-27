@@ -15,30 +15,29 @@ export default class NewStudentForm extends Component {
       }
     }
 
-    componentDidMount = () => {
-        var numTeachers = this.props.teachers.length;
-        console.log(this.props.teachers)
-        let teachers;
-        for(var i = numTeachers-1; i>=0; i++) {
-            teachers += (
-                <input 
-                    type="radio" 
-                    value= {this.props.teachers[i].name}
-                    onClick={this.setClass} />
-            )
-        }
-        this.setState({ teacherList: teachers })
-    }
+    // componentDidMount = () => {
+    //     var numTeachers = this.props.teachers.length;
+    //     let teachers;
+    //     for(var i = numTeachers-1; i>=0; i++) {
+    //         teachers += (
+    //             <input 
+    //                 type="radio" 
+    //                 value= {this.props.teachers[i].name}
+    //                 onClick={this.setClass} />
+    //         )
+    //     }
+    //     this.setState({ teacherList: teachers })
+    // }
 
-    setClass = e => {
-        const curTeacher = this.props.teachers.filter(
-            teacher => teacher.name === e.target.value
-        )
-        this.setState({
-            teacher: e.target.value,
-            class: curTeacher[0].class,
-        })
-    }
+    // setClass = e => {
+    //     const curTeacher = this.props.teachers.filter(
+    //         teacher => teacher.name === e.target.value
+    //     )
+    //     this.setState({
+    //         teacher: e.target.value,
+    //         class: curTeacher[0].class,
+    //     })
+    // }
 
     handleClick = () => {
         if(this.state.name !== "" && this.state.teacher !== "") {

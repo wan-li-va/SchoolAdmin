@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Card from 'react-bootstrap/Card';
+import Button from 'react-bootstrap/Button'
 
 export default class Student extends Component {
     constructor(props) {
@@ -29,7 +30,7 @@ export default class Student extends Component {
             <div>
                 <Card>
                     <Card.Body>
-                        <Card.Text>
+                        {/* <Card.Text> */}
                             {(this.state.isEditing) ?
                                 <div>
                                     <div className="labels">
@@ -42,22 +43,22 @@ export default class Student extends Component {
                                         <label>Birthday: </label>
                                         <input type="text" onChange={e => this.setState({ birthday: e.target.value })} value={this.state.birthday} />
                                     </div>
-                                    <button onClick={this.editStudent}>Save Changes</button>
-                                    <button onClick={() => this.props.removeStudent(this.props.student)}>Delete Note</button>
+                                    <Button onClick={this.editStudent}>Save Changes</Button>
+                                    <Button onClick={() => this.props.removeStudent(this.props.student)}>Delete Note</Button>
                                 </div>
                                 :
                                 <div>
-                                    <em>Name: {this.state.name}</em>
-                                    <em>Teacher: {this.state.teacher}</em>
-                                    <em>Grade: {this.state.grade}</em>
-                                    <em>Birthday: {this.state.birthday}</em>
-                                    <button className="button" onClick={() => this.setState({ isEditing: true })}>
+                                    <em>Name: {this.state.name}</em> <br />
+                                    <em>Teacher: {this.state.teacher}</em> <br />
+                                    <em>Grade: {this.state.grade}</em> <br />
+                                    <em>Birthday: {this.state.birthday}</em> <br />
+                                    <Button className="button" onClick={() => this.setState({ isEditing: true })}>
                                         Edit Student Information
-                                </button>
-                                    <button onClick={() => this.props.removeStudent(this.props.student)}>Delete Student</button>
+                                </Button> <br />
+                                    <Button onClick={() => this.props.removeStudent(this.props.student)}>Delete Student</Button>
                                 </div>
                             }
-                        </Card.Text>
+                        {/* </Card.Text> */}
                     </Card.Body>
                 </Card>
             </div>

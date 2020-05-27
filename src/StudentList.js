@@ -20,7 +20,7 @@ export default class StudentList extends Component {
         })
 
       return (
-        <div>
+        <div className="StudentList">
             {list}
         </div>
       );
